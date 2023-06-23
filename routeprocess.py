@@ -163,9 +163,9 @@ if __name__ == '__main__':
         else:
             final_ipset = IPSet([IP("0.0.0.0/0"),IP("::/0")])
             if(ipversion == ipversion_v4only):
-                final_ipset = IPSet(IP("0.0.0.0/0"))
+                final_ipset = IPSet([IP("0.0.0.0/0")])
             if(ipversion == ipversion_v6only):
-                final_ipset = IPSet(IP("::/0"))
+                final_ipset = IPSet([IP("::/0")])
         final_ipset = read_ip_data_from_file(input2_file_path, final_ipset, mod)
     
     print_ip_data(final_ipset, output_path)
